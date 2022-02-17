@@ -1,0 +1,230 @@
+Running 1 Tests ...
+Test (part2.fail_agree): Fail Agreement
+[1637930842298][raft.h:240][node 0 term 0] initial raft current_term:0,votefor:-1,commitIndex:0,lastAppiled:0,last_log_index0,last_log_term0
+[1637930842345][raft.h:240][node 1 term 0] initial raft current_term:0,votefor:-1,commitIndex:0,lastAppiled:0,last_log_index0,last_log_term0
+[1637930842395][raft.h:240][node 2 term 0] initial raft current_term:0,votefor:-1,commitIndex:0,lastAppiled:0,last_log_index0,last_log_term0
+[1637930842395][raft.h:311][node 0 term 0] start
+[1637930842395][raft.h:311][node 1 term 0] start
+[1637930842398][raft.h:311][node 2 term 0] start
+[1637930843727][raft.h:801][node 0 term 1] begin select,cadidate id:0 ,term:1 , last_log_index:0 ,last_log_term:0
+[1637930843749][raft.h:451][node 0 term 1] elect reply -tergat:1 ,reply:3
+[1637930843750][raft.h:451][node 0 term 1] elect reply -tergat:2 ,reply:3
+[1637930843757][raft.h:818][node 0 term 1] turn to leader
+[1637930843768][raft.h:898][node 0 term 1] restart,num:1,begin_index:1,my commitIndex:0
+[1637930843768][raft.h:898][node 0 term 1] restart,num:2,begin_index:1,my commitIndex:0
+[1637930843825][raft.h:346][node 0 term 1] new command add to vector
+[1637930843825][raft.h:347][node 0 term 1] the cmd value input=101
+[1637930843825][raft.h:928][node 0 term 1] begin new commit work
+[1637930843833][raft.h:946][node 0 term 1] now commitIndex is0
+[1637930843833][raft.h:973][node 0 term 1] copy mission have send,log nums:1
+[1637930843834][raft.h:497][node 1 term 1] recive copy mission,copy num is1, prev_log_index is0, prev_log_term is 0
+[1637930843834][raft.h:512][node 1 term 1] the value recive is 101
+[1637930843834][raft.h:497][node 2 term 1] recive copy mission,copy num is1, prev_log_index is0, prev_log_term is 0
+[1637930843834][raft.h:512][node 2 term 1] the value recive is 101
+[1637930843857][raft.h:541][node 2 term 1] finish copy
+[1637930843858][raft.h:541][node 1 term 1] finish copy
+[1637930843884][raft.h:984][node 0 term 1] handle mission reply
+[1637930843884][raft.h:1012][node 0 term 1] fist init three mission_set:0,copy size:0,commit size2
+[1637930843884][raft.h:1125][node 0 term 1] commit_missions-size=2 ,totle_num:3
+[1637930843884][raft.h:1126][node 0 term 1] turn begin_commit to true
+[1637930843884][raft.h:1170][node 0 term 1] begin leader's commit
+[1637930843889][raft.h:1227][node 0 term 1] begin apply
+[1637930843890][raft.h:598][node 1 term 1] recive commit mission
+[1637930843890][raft.h:598][node 2 term 1] recive commit mission
+[1637930843898][raft.h:1227][node 2 term 1] begin apply
+[1637930843899][raft.h:1227][node 1 term 1] begin apply
+[1637930843901][raft.h:1236][node 0 term 1] apply log index:1,value101
+[1637930843903][raft.h:1236][node 1 term 1] apply log index:1,value101
+[1637930843903][raft.h:1236][node 2 term 1] apply log index:1,value101
+[1637930843940][raft.h:984][node 0 term 1] handle mission reply
+[1637930843940][raft.h:1065][node 0 term 1] the new mission set is unfinished size:0,copy size:0,commit size0
+[1637930843940][raft.h:1073][node 0 term 1] turn can_quit to true
+[1637930843990][raft.h:1195][node 0 term 1] finish one commit
+[1637930847045][raft.h:801][node 1 term 2] begin select,cadidate id:1 ,term:2 , last_log_index:1 ,last_log_term:1
+[1637930847075][raft.h:451][node 1 term 2] elect reply -tergat:2 ,reply:3
+[1637930847150][raft.h:346][node 1 term 2] new command add to vector
+[1637930847150][raft.h:347][node 1 term 2] the cmd value input=102
+[1637930847151][raft.h:928][node 1 term 2] begin new commit work
+[1637930847159][raft.h:946][node 1 term 2] now commitIndex is1
+[1637930847168][raft.h:973][node 1 term 2] copy mission have send,log nums:1
+[1637930847168][raft.h:497][node 2 term 2] recive copy mission,copy num is1, prev_log_index is1, prev_log_term is 1
+[1637930847169][raft.h:512][node 2 term 2] the value recive is 102
+[1637930847169][raft.h:735][node 1 term 2] mission didn't answer
+[1637930847177][raft.h:555][node 2 term 2] checkout index 1,local term is1 ,come term is1
+[1637930847177][raft.h:558][node 2 term 2] check success
+[1637930847200][raft.h:572][node 2 term 2] finish copy
+[1637930847218][raft.h:984][node 1 term 2] handle mission reply
+[1637930847219][raft.h:1012][node 1 term 2] fist init three mission_set:0,copy size:0,commit size1
+[1637930847219][raft.h:1125][node 1 term 2] commit_missions-size=1 ,totle_num:3
+[1637930847219][raft.h:1126][node 1 term 2] turn begin_commit to true
+[1637930847219][raft.h:1170][node 1 term 2] begin leader's commit
+[1637930847227][raft.h:1227][node 1 term 2] begin apply
+[1637930847228][raft.h:598][node 2 term 2] recive commit mission
+[1637930847237][raft.h:1227][node 2 term 2] begin apply
+[1637930847238][raft.h:1236][node 1 term 2] apply log index:2,value102
+[1637930847249][raft.h:1236][node 2 term 2] apply log index:2,value102
+[1637930847284][raft.h:346][node 1 term 2] new command add to vector
+[1637930847284][raft.h:347][node 1 term 2] the cmd value input=103
+[1637930847284][raft.h:984][node 1 term 2] handle mission reply
+[1637930847284][raft.h:1065][node 1 term 2] the new mission set is unfinished size:0,copy size:0,commit size0
+[1637930847284][raft.h:1073][node 1 term 2] turn can_quit to true
+[1637930847335][raft.h:1195][node 1 term 2] finish one commit
+[1637930847345][raft.h:928][node 1 term 2] begin new commit work
+[1637930847354][raft.h:946][node 1 term 2] now commitIndex is2
+[1637930847363][raft.h:973][node 1 term 2] copy mission have send,log nums:1
+[1637930847364][raft.h:497][node 2 term 2] recive copy mission,copy num is1, prev_log_index is2, prev_log_term is 2
+[1637930847364][raft.h:735][node 1 term 2] mission didn't answer
+[1637930847364][raft.h:512][node 2 term 2] the value recive is 103
+[1637930847372][raft.h:555][node 2 term 2] checkout index 2,local term is2 ,come term is2
+[1637930847372][raft.h:558][node 2 term 2] check success
+[1637930847394][raft.h:572][node 2 term 2] finish copy
+[1637930847413][raft.h:984][node 1 term 2] handle mission reply
+[1637930847413][raft.h:1012][node 1 term 2] fist init three mission_set:0,copy size:0,commit size1
+[1637930847413][raft.h:1125][node 1 term 2] commit_missions-size=1 ,totle_num:3
+[1637930847413][raft.h:1126][node 1 term 2] turn begin_commit to true
+[1637930847413][raft.h:1170][node 1 term 2] begin leader's commit
+[1637930847421][raft.h:1227][node 1 term 2] begin apply
+[1637930847422][raft.h:598][node 2 term 2] recive commit mission
+[1637930847429][raft.h:1236][node 1 term 2] apply log index:3,value103
+[1637930847429][raft.h:1227][node 2 term 2] begin apply
+[1637930847435][raft.h:1236][node 2 term 2] apply log index:3,value103
+[1637930847471][raft.h:984][node 1 term 2] handle mission reply
+[1637930847471][raft.h:1065][node 1 term 2] the new mission set is unfinished size:0,copy size:0,commit size0
+[1637930847471][raft.h:1073][node 1 term 2] turn can_quit to true
+[1637930847522][raft.h:1195][node 1 term 2] finish one commit
+[1637930848463][raft.h:346][node 1 term 2] new command add to vector
+[1637930848463][raft.h:347][node 1 term 2] the cmd value input=104
+[1637930848463][raft.h:928][node 1 term 2] begin new commit work
+[1637930848469][raft.h:946][node 1 term 2] now commitIndex is3
+[1637930848474][raft.h:973][node 1 term 2] copy mission have send,log nums:1
+[1637930848475][raft.h:497][node 2 term 2] recive copy mission,copy num is1, prev_log_index is3, prev_log_term is 2
+[1637930848475][raft.h:512][node 2 term 2] the value recive is 104
+[1637930848475][raft.h:735][node 1 term 2] mission didn't answer
+[1637930848480][raft.h:555][node 2 term 2] checkout index 3,local term is2 ,come term is2
+[1637930848480][raft.h:558][node 2 term 2] check success
+[1637930848492][raft.h:572][node 2 term 2] finish copy
+[1637930848525][raft.h:984][node 1 term 2] handle mission reply
+[1637930848525][raft.h:1012][node 1 term 2] fist init three mission_set:0,copy size:0,commit size1
+[1637930848525][raft.h:1125][node 1 term 2] commit_missions-size=1 ,totle_num:3
+[1637930848525][raft.h:1126][node 1 term 2] turn begin_commit to true
+[1637930848525][raft.h:1170][node 1 term 2] begin leader's commit
+[1637930848530][raft.h:1227][node 1 term 2] begin apply
+[1637930848531][raft.h:598][node 2 term 2] recive commit mission
+[1637930848537][raft.h:1227][node 2 term 2] begin apply
+[1637930848537][raft.h:1236][node 1 term 2] apply log index:4,value104
+[1637930848545][raft.h:1236][node 2 term 2] apply log index:4,value104
+[1637930848585][raft.h:346][node 1 term 2] new command add to vector
+[1637930848585][raft.h:347][node 1 term 2] the cmd value input=105
+[1637930848586][raft.h:984][node 1 term 2] handle mission reply
+[1637930848586][raft.h:1065][node 1 term 2] the new mission set is unfinished size:0,copy size:0,commit size0
+[1637930848586][raft.h:1073][node 1 term 2] turn can_quit to true
+[1637930848636][raft.h:1195][node 1 term 2] finish one commit
+[1637930848646][raft.h:928][node 1 term 2] begin new commit work
+[1637930848651][raft.h:946][node 1 term 2] now commitIndex is4
+[1637930848655][raft.h:973][node 1 term 2] copy mission have send,log nums:1
+[1637930848656][raft.h:735][node 1 term 2] mission didn't answer
+[1637930848656][raft.h:497][node 2 term 2] recive copy mission,copy num is1, prev_log_index is4, prev_log_term is 2
+[1637930848656][raft.h:512][node 2 term 2] the value recive is 105
+[1637930848661][raft.h:555][node 2 term 2] checkout index 4,local term is2 ,come term is2
+[1637930848661][raft.h:558][node 2 term 2] check success
+[1637930848675][raft.h:572][node 2 term 2] finish copy
+[1637930848706][raft.h:984][node 1 term 2] handle mission reply
+[1637930848706][raft.h:1012][node 1 term 2] fist init three mission_set:0,copy size:0,commit size1
+[1637930848706][raft.h:1125][node 1 term 2] commit_missions-size=1 ,totle_num:3
+[1637930848706][raft.h:1126][node 1 term 2] turn begin_commit to true
+[1637930848706][raft.h:1170][node 1 term 2] begin leader's commit
+[1637930848713][raft.h:1227][node 1 term 2] begin apply
+[1637930848714][raft.h:598][node 2 term 2] recive commit mission
+[1637930848718][raft.h:1227][node 2 term 2] begin apply
+[1637930848718][raft.h:1236][node 1 term 2] apply log index:5,value105
+[1637930848722][raft.h:1236][node 2 term 2] apply log index:5,value105
+[1637930848737][raft.h:346][node 1 term 2] new command add to vector
+[1637930848737][raft.h:347][node 1 term 2] the cmd value input=106
+[1637930848761][raft.h:1324][node 0 term 1] term too old, turn to follower
+[1637930848764][raft.h:984][node 1 term 2] handle mission reply
+[1637930848764][raft.h:1065][node 1 term 2] the new mission set is unfinished size:0,copy size:0,commit size0
+[1637930848764][raft.h:1073][node 1 term 2] turn can_quit to true
+[1637930848814][raft.h:1195][node 1 term 2] finish one commit
+[1637930848824][raft.h:928][node 1 term 2] begin new commit work
+[1637930848829][raft.h:946][node 1 term 2] now commitIndex is5
+[1637930848835][raft.h:973][node 1 term 2] copy mission have send,log nums:1
+[1637930848835][raft.h:497][node 0 term 2] recive copy mission,copy num is1, prev_log_index is5, prev_log_term is 2
+[1637930848835][raft.h:512][node 0 term 2] the value recive is 106
+[1637930848835][raft.h:548][node 0 term 2] do not have the log with index5 ,term 2 
+[1637930848835][raft.h:497][node 2 term 2] recive copy mission,copy num is1, prev_log_index is5, prev_log_term is 2
+[1637930848835][raft.h:512][node 2 term 2] the value recive is 106
+[1637930848840][raft.h:555][node 2 term 2] checkout index 5,local term is2 ,come term is2
+[1637930848840][raft.h:558][node 2 term 2] check success
+[1637930848853][raft.h:572][node 2 term 2] finish copy
+[1637930848885][raft.h:984][node 1 term 2] handle mission reply
+[1637930848885][raft.h:1012][node 1 term 2] fist init three mission_set:0,copy size:1,commit size1
+[1637930848885][raft.h:1125][node 1 term 2] commit_missions-size=1 ,totle_num:3
+[1637930848885][raft.h:1126][node 1 term 2] turn begin_commit to true
+[1637930848898][raft.h:1170][node 1 term 2] begin leader's commit
+[1637930848903][raft.h:1227][node 1 term 2] begin apply
+[1637930848903][raft.h:497][node 0 term 2] recive copy mission,copy num is5, prev_log_index is1, prev_log_term is 1
+[1637930848903][raft.h:512][node 0 term 2] the value recive is 102
+[1637930848903][raft.h:512][node 0 term 2] the value recive is 103
+[1637930848903][raft.h:512][node 0 term 2] the value recive is 104
+[1637930848903][raft.h:512][node 0 term 2] the value recive is 105
+[1637930848903][raft.h:512][node 0 term 2] the value recive is 106
+[1637930848903][raft.h:598][node 2 term 2] recive commit mission
+[1637930848908][raft.h:1227][node 2 term 2] begin apply
+[1637930848908][raft.h:1236][node 1 term 2] apply log index:6,value106
+[1637930848908][raft.h:555][node 0 term 2] checkout index 1,local term is1 ,come term is1
+[1637930848908][raft.h:558][node 0 term 2] check success
+[1637930848915][raft.h:1236][node 2 term 2] apply log index:6,value106
+[1637930848953][raft.h:984][node 1 term 2] handle mission reply
+[1637930848953][raft.h:1065][node 1 term 2] the new mission set is unfinished size:1,copy size:0,commit size0
+[1637930848978][raft.h:572][node 0 term 2] finish copy
+[1637930849003][raft.h:984][node 1 term 2] handle mission reply
+[1637930849003][raft.h:1065][node 1 term 2] the new mission set is unfinished size:0,copy size:0,commit size1
+[1637930849003][raft.h:1073][node 1 term 2] turn can_quit to true
+[1637930849003][raft.h:598][node 0 term 2] recive commit mission
+[1637930849009][raft.h:1227][node 0 term 2] begin apply
+[1637930849016][raft.h:1236][node 0 term 2] apply log index:2,value102
+[1637930849016][raft.h:1236][node 0 term 2] apply log index:3,value103
+[1637930849016][raft.h:1236][node 0 term 2] apply log index:4,value104
+[1637930849016][raft.h:1236][node 0 term 2] apply log index:5,value105
+[1637930849016][raft.h:1236][node 0 term 2] apply log index:6,value106
+[1637930849053][raft.h:1195][node 1 term 2] finish one commit
+[1637930849063][raft.h:898][node 1 term 2] restart,num:0,begin_index:2,my commitIndex:6
+[1637930849071][raft.h:913][node 1 term 2] begin restart log send
+[1637930849071][raft.h:606][node 0 term 2] recive restart mission
+[1637930849116][raft.h:1227][node 0 term 2] begin apply
+[1637930850032][raft.h:346][node 1 term 2] new command add to vector
+[1637930850032][raft.h:347][node 1 term 2] the cmd value input=107
+[1637930850032][raft.h:928][node 1 term 2] begin new commit work
+[1637930850036][raft.h:946][node 1 term 2] now commitIndex is6
+[1637930850040][raft.h:973][node 1 term 2] copy mission have send,log nums:1
+[1637930850040][raft.h:497][node 0 term 2] recive copy mission,copy num is1, prev_log_index is6, prev_log_term is 2
+[1637930850040][raft.h:512][node 0 term 2] the value recive is 107
+[1637930850040][raft.h:548][node 0 term 2] do not have the log with index6 ,term 2 
+[1637930850040][raft.h:497][node 2 term 2] recive copy mission,copy num is1, prev_log_index is6, prev_log_term is 2
+[1637930850040][raft.h:512][node 2 term 2] the value recive is 107
+[1637930850045][raft.h:555][node 2 term 2] checkout index 6,local term is2 ,come term is2
+[1637930850045][raft.h:558][node 2 term 2] check success
+[1637930850058][raft.h:572][node 2 term 2] finish copy
+[1637930850090][raft.h:984][node 1 term 2] handle mission reply
+[1637930850090][raft.h:1012][node 1 term 2] fist init three mission_set:0,copy size:1,commit size1
+[1637930850090][raft.h:1125][node 1 term 2] commit_missions-size=1 ,totle_num:3
+[1637930850090][raft.h:1126][node 1 term 2] turn begin_commit to true
+[1637930850097][raft.h:1170][node 1 term 2] begin leader's commit
+[1637930850102][raft.h:1227][node 1 term 2] begin apply
+[1637930850103][raft.h:497][node 0 term 2] recive copy mission,copy num is2, prev_log_index is5, prev_log_term is 2
+[1637930850103][raft.h:598][node 2 term 2] recive commit mission
+[1637930850103][raft.h:512][node 0 term 2] the value recive is 106
+[1637930850103][raft.h:512][node 0 term 2] the value recive is 107
+[1637930850107][raft.h:1236][node 1 term 2] apply log index:7,value107
+[1637930850107][raft.h:555][node 0 term 2] checkout index 5,local term is2 ,come term is2
+[1637930850107][raft.h:558][node 0 term 2] check success
+[1637930850109][raft.h:1227][node 2 term 2] begin apply
+[1637930850113][raft.h:1236][node 2 term 2] apply log index:7,value107
+[1637930850126][raft.h:572][node 0 term 2] finish copy
+[1637930850152][raft.h:984][node 1 term 2] handle mission reply
+[1637930850153][raft.h:1065][node 1 term 2] the new mission set is unfinished size:0,copy size:0,commit size1
+[1637930850153][raft.h:1073][node 1 term 2] turn can_quit to true
+[1637930850153][raft.h:598][node 0 term 2] recive commit mission
+[1637930850159][raft.h:1227][node 0 term 2] begin apply
+[1637930850167][raft.h:1236][node 0 term 2] apply log index:6,value106
+[1637930850167][raft.h:1236][node 0 term 2] apply log index:7,value107
