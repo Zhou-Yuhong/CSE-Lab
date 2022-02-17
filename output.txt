@@ -1,0 +1,73 @@
+Running 3 Tests ...
+Test (part2.shard_client_replica): Test shard client replication
+[1640537865881][./raft.h:260][node 0 term 0] initial raft current_term:0,votefor:-1,commitIndex:0,lastAppiled:0,last_log_index0,last_log_term0
+[1640537865893][./raft.h:260][node 1 term 0] initial raft current_term:0,votefor:-1,commitIndex:0,lastAppiled:0,last_log_index0,last_log_term0
+[1640537865905][./raft.h:260][node 2 term 0] initial raft current_term:0,votefor:-1,commitIndex:0,lastAppiled:0,last_log_index0,last_log_term0
+[1640537865905][./raft.h:343][node 0 term 0] start
+[1640537866328][./raft.h:343][node 1 term 0] start
+[1640537866329][./raft.h:343][node 2 term 0] start
+[1640537866789][./raft.h:923][node 0 term 1] begin select,cadidate id:0 ,term:1 , last_log_index:0 ,last_log_term:0
+[1640537866789][./raft.h:923][node 2 term 1] begin select,cadidate id:2 ,term:1 , last_log_index:0 ,last_log_term:0
+tx[0] begin
+[1640537866794][./raft.h:509][node 0 term 1] elect reply -tergat:2 ,reply:3
+[1640537866795][./raft.h:509][node 2 term 1] elect reply -tergat:0 ,reply:3
+[1640537866799][./raft.h:509][node 0 term 1] elect reply -tergat:1 ,reply:3
+[1640537866799][./raft.h:509][node 2 term 1] elect reply -tergat:1 ,reply:1
+[1640537866809][./raft.h:941][node 0 term 1] turn to leader
+[1640537866809][./raft.h:941][node 2 term 1] turn to leader
+[1640537869766][./raft.h:923][node 0 term 2] begin select,cadidate id:0 ,term:2 , last_log_index:0 ,last_log_term:0
+[1640537869822][./raft.h:509][node 0 term 2] elect reply -tergat:2 ,reply:3
+[1640537869823][./raft.h:509][node 0 term 2] elect reply -tergat:1 ,reply:3
+[1640537869827][./raft.h:941][node 0 term 2] turn to leader
+[1640537869848][./raft.h:1024][node 0 term 2] restart,num:1,begin_index:1,my commitIndex:0
+size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40tx[0] commit
+tx[1] begin
+size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40tx[1] commit
+Pass (part2.shard_client_replica). wall-time: 14.05s, user-time: 0.61s, sys-time: 1.61s
+Test (part2.shard_client_replica_with_put): Test shard client shuffle replica before put
+[1640537879921][./raft.h:260][node 0 term 0] initial raft current_term:0,votefor:-1,commitIndex:0,lastAppiled:0,last_log_index0,last_log_term0
+[1640537879932][./raft.h:260][node 1 term 0] initial raft current_term:0,votefor:-1,commitIndex:0,lastAppiled:0,last_log_index0,last_log_term0
+[1640537879942][./raft.h:260][node 2 term 0] initial raft current_term:0,votefor:-1,commitIndex:0,lastAppiled:0,last_log_index0,last_log_term0
+[1640537879942][./raft.h:343][node 0 term 0] start
+[1640537879942][./raft.h:343][node 1 term 0] start
+[1640537879943][./raft.h:343][node 2 term 0] start
+tx[0] begin
+[1640537882574][./raft.h:923][node 0 term 1] begin select,cadidate id:0 ,term:1 , last_log_index:0 ,last_log_term:0
+[1640537882594][./raft.h:509][node 0 term 1] elect reply -tergat:1 ,reply:3
+[1640537882594][./raft.h:509][node 0 term 1] elect reply -tergat:2 ,reply:3
+[1640537882595][./raft.h:941][node 0 term 1] turn to leader
+[1640537882603][./raft.h:1024][node 0 term 1] restart,num:1,begin_index:1,my commitIndex:0
+[1640537882603][./raft.h:1024][node 0 term 1] restart,num:2,begin_index:1,my commitIndex:0
+size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40tx[0] commit
+tx[1] begin
+size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40tx[1] commit
+tx[2] begin
+size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40tx[2] commit
+tx[3] begin
+size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40tx[3] commit
+Pass (part2.shard_client_replica_with_put). wall-time: 4.32s, user-time: 0.08s, sys-time: 0.3s
+Test (part2.raft_view_server): Test simple view server raft group
+[1640537884243][./raft.h:260][node 0 term 0] initial raft current_term:0,votefor:-1,commitIndex:0,lastAppiled:0,last_log_index0,last_log_term0
+[1640537884253][./raft.h:260][node 1 term 0] initial raft current_term:0,votefor:-1,commitIndex:0,lastAppiled:0,last_log_index0,last_log_term0
+[1640537884264][./raft.h:260][node 2 term 0] initial raft current_term:0,votefor:-1,commitIndex:0,lastAppiled:0,last_log_index0,last_log_term0
+[1640537884264][./raft.h:343][node 0 term 0] start
+[1640537884264][./raft.h:343][node 1 term 0] start
+[1640537884264][./raft.h:343][node 2 term 0] start
+[1640537887333][./raft.h:923][node 0 term 1] begin select,cadidate id:0 ,term:1 , last_log_index:0 ,last_log_term:0
+[1640537887362][./raft.h:509][node 0 term 1] elect reply -tergat:2 ,reply:3
+[1640537887363][./raft.h:509][node 0 term 1] elect reply -tergat:1 ,reply:3
+[1640537887364][./raft.h:941][node 0 term 1] turn to leader
+[1640537887374][./raft.h:1024][node 0 term 1] restart,num:1,begin_index:1,my commitIndex:0
+[1640537887374][./raft.h:1024][node 0 term 1] restart,num:2,begin_index:1,my commitIndex:0
+tx[0] begin
+size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40[1640537890835][./raft.h:923][node 1 term 2] begin select,cadidate id:1 ,term:2 , last_log_index:0 ,last_log_term:0
+[1640537890877][./raft.h:509][node 1 term 2] elect reply -tergat:2 ,reply:3
+size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40[1640537891634][./raft.h:1533][node 0 term 1] term too old, turn to follower
+tx[0] commit
+tx[1] begin
+[1640537893440][./raft.h:923][node 0 term 3] begin select,cadidate id:0 ,term:3 , last_log_index:0 ,last_log_term:0
+[1640537893494][./raft.h:509][node 0 term 3] elect reply -tergat:2 ,reply:3
+size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40size of chdb_cmd is40tx[1] commit
+[1640537894364][./raft.h:1533][node 1 term 2] term too old, turn to follower
+Pass (part2.raft_view_server). wall-time: 10.17s, user-time: 0.18s, sys-time: 0.73s
+Pass 3/3 tests. wall-time: 28.55s, user-time: 0.87s, sys-time: 2.64s
