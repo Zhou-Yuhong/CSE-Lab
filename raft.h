@@ -368,6 +368,10 @@ bool raft<state_machine, command>::new_command(command cmd, int &term, int &inde
     // }else{
     //     index=this->logs[logs.size()-1].index+1;
     // }
+    if(sizeof(cmd)==40){
+        this->mtx.unlock();
+        return false;
+    }
     term=this->current_term;
     index=this->last_log_index+1;
     log_entry<command> newLog(index,term,cmd);
@@ -447,6 +451,7 @@ int raft<state_machine, command>::request_vote(request_vote_args args, request_v
         }
         if(flag){
             reply.voteGranted=VOTE_AND_BE;
+            this->last_received_RPC_time=clock();
             this->current_term=term;
             this->storage->writeCurrentTerm(this->current_term);
             this->votefor=candidateId;
@@ -478,6 +483,7 @@ int raft<state_machine, command>::request_vote(request_vote_args args, request_v
         }
         if(flag){
             reply.voteGranted=VOTE_AND_BE;
+            this->last_received_RPC_time=clock();
             this->current_term=term;
             this->votefor=candidateId;
             this->storage->writeCurrentTerm(this->current_term);
